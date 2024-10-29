@@ -12,6 +12,8 @@ aws configure set region us-east-1
 unset AWS_ACCESS_KEY_ID
 unset AWS_SECRET_ACCESS_KEY
 
+sleep 1
+
 mkdir -p /data
 
 nginx && lorax-launcher --json-output --model-id TinyLlama/TinyLlama_v1.1

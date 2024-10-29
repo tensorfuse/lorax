@@ -1,5 +1,6 @@
 FROM ghcr.io/predibase/lorax:main
 
+
 RUN apt-get update && apt-get install -y  nginx 
 WORKDIR /usr/src/
 
@@ -10,4 +11,4 @@ COPY nginx.conf /etc/nginx/nginx.conf
 EXPOSE 80
 COPY lorax-entrypoint.sh /usr/src/
 RUN chmod +x /usr/src/lorax-entrypoint.sh
-ENTRYPOINT ["./lorax-entrypoint.sh"]
+ENTRYPOINT ["/usr/src/lorax-entrypoint.sh"]
