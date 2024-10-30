@@ -1,7 +1,7 @@
 #!/bin/sh
 
 export PATH=/opt/conda/bin:$PATH
-export HUGGINGFACE_HUB_CACHE=/data 
+export HUGGINGFACE_HUB_CACHE=data 
 export HF_HUB_ENABLE_HF_TRANSFER=1
 
 
@@ -14,6 +14,6 @@ unset AWS_SECRET_ACCESS_KEY
 
 sleep 1
 
-mkdir -p /data
+mkdir -p data
 
-nginx && lorax-launcher --json-output --model-id TinyLlama/TinyLlama_v1.1
+nginx && lorax-launcher --json-output --model-id meta-llama/Meta-Llama-3.1-8B-Instruct

@@ -1,4 +1,4 @@
-FROM ghcr.io/predibase/lorax:main
+FROM gane5h/lorax:main
 
 
 RUN apt-get update && apt-get install -y  nginx 

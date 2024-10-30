@@ -1,0 +1,7 @@
+# How to run on tensorkube
+```
+# create hugging face secret in tensorkube
+tensorkube secret create hugging-face-secret HUGGING_FACE_HUB_TOKEN=<secret>
+# aws-secret gets created by tensorkube, we can use that to fetch models from s3
+tensorkube deploy --gpus 1 --gpu-type A10G --secret hugging-face-secret --secret aws-secret
+```
