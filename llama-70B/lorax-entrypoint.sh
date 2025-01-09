@@ -16,4 +16,4 @@ sleep 1
 
 mkdir -p /data
 
-nginx && lorax-launcher --json-output --model-id meta-llama/Llama-3.1-70B-Instruct --num-shard 4
+nginx && lorax-launcher --json-output --model-id meta-llama/Llama-3.1-70B-Instruct --num-shard 4 --port 3000
